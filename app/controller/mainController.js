@@ -2,10 +2,12 @@ Ext.define('MvcSkel.controller.mainController', {
     extend: 'Ext.app.Controller',
     
     
-    tampilDashboard: function(button,e,options) {
-    
-       Ext.getCmp('windashboard').show();
+    addDashboard: function() {
+        //
+        
     },
+    
+    
     
     myAddTab: function(button,e,options) {
         
@@ -29,7 +31,7 @@ Ext.define('MvcSkel.controller.mainController', {
     init: function(application) {
         this.control({
             "#menuDashboard": {
-                click: this.tampilDashboard
+                click: this.addDashboard
             },
             "#menuGrid": {
                 click: this.myAddTab

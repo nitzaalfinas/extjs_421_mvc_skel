@@ -23,10 +23,8 @@ Ext.define('MvcSkel.view.mainView', {
                         {
                             xtype: 'panel',
                             region: 'north',
-                            height: 50,
-                            html: '<h1 style=\'font-size: 18px;\'>Sistem Informasi Terpadu Kecamatan</h1>',
-                            id: 'Header',
-                            bodyPadding: 15
+                            title: 'Your application title',
+                            id: 'Header'
                         },
                         {
                             xtype: 'panel',
@@ -71,11 +69,12 @@ Ext.define('MvcSkel.view.mainView', {
                                         type: 'vbox'
                                     },
                                     bodyPadding: 5,
-                                    title: 'Dashboard',
+                                    title: 'Menu Button',
                                     items: [
                                         {
+                                            //if you want to know how it works, just take a look at mainController
                                             xtype: 'button',
-                                            id: 'menuDashboard',
+                                            id: 'menuDashboard', 
                                             margin: '0 0 5 0',
                                             text: 'Dashboard',
                                             textAlign: 'left'
