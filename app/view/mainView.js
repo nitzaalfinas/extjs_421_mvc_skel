@@ -69,7 +69,7 @@ Ext.define('MvcSkel.view.mainView', {
                                         type: 'vbox'
                                     },
                                     bodyPadding: 5,
-                                    title: 'Menu Button',
+                                    title: 'Menu with button',
                                     items: [
                                         {
                                             //if you want to know how it works, just take a look at mainController
