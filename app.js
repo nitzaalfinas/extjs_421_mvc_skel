@@ -13,7 +13,7 @@ Ext.application({
         'mainView'
     ],
     autoCreateViewport: true,
-    name: 'LatihanB',
+    name: 'MvcSkel',
     controllers: [
         'mainController'
     ]
