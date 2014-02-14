@@ -7,10 +7,11 @@ Ext.application({
         
     ],
     stores: [
-        
+        'myTreeStore'
     ],
     views: [
-        'mainView'
+        'mainView',
+        'mytreemenu.mytreemenu'
     ],
     autoCreateViewport: true,
     name: 'MvcSkel',

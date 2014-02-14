@@ -3,10 +3,14 @@ Ext.define('MvcSkel.controller.mainController', {
     
     
     addDashboard: function() {
+        //this is show you how to add a child tab to the tab panel and active it if it is exist
+        
+        
         // define/create the dashboard panel
         var dashboardPanel = Ext.create('Ext.panel.Panel',{
             title: 'Dashboard',
-            itemId: 'dashboardPanel'
+            itemId: 'dashboardPanel',
+            closable: true
         });
         
         // define main tab
@@ -28,7 +32,7 @@ Ext.define('MvcSkel.controller.mainController', {
     
     
     
-    myAddTab: function(button,e,options) {
+    addMyGrid: function(button,e,options) {
         
         var wowow = Ext.create('Ext.panel.Panel',{
                         title: 'Nu Tab',
@@ -53,9 +57,10 @@ Ext.define('MvcSkel.controller.mainController', {
                 click: this.addDashboard
             },
             "#menuGrid": {
-                click: this.myAddTab
+                click: this.addMyGrid
             }
         });
     }
 
 });
+

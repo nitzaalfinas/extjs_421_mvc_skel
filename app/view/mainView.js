@@ -2,6 +2,9 @@ Ext.define('MvcSkel.view.mainView', {
     extend: 'Ext.container.Viewport',
     alias: 'widget.mainView',
 
+    requires: [
+        'MvcSkel.view.mytreemenu.mytreemenu'
+    ],
     
     layout: {
         type: 'fit'
@@ -29,6 +32,7 @@ Ext.define('MvcSkel.view.mainView', {
                         {
                             xtype: 'panel',
                             region: 'center',
+                            title: 'Center Region',
                             id: 'wrapContent',
                             margin: '0 0 0 5',
                             autoScroll: true,
@@ -38,15 +42,7 @@ Ext.define('MvcSkel.view.mainView', {
                             items: [
                                 {
                                     xtype: 'tabpanel',
-                                    id: 'myTabPanel',
-                                    items: [
-                                        {
-                                            title: 'Panel One'
-                                        },
-                                        {
-                                            title: 'Panel Two'
-                                        }
-                                    ]
+                                    id: 'myTabPanel'
                                 }
                             ]
                         },
@@ -95,14 +91,10 @@ Ext.define('MvcSkel.view.mainView', {
                                         type: 'vbox'
                                     },
                                     bodyPadding: 5,
-                                    title: 'Setup',
+                                    title: 'Tree menu',
                                     items: [
                                         {
-                                            xtype: 'button',
-                                            id: 'menuUserData',
-                                            margin: '0 0 5 0',
-                                            text: 'User',
-                                            textAlign: 'left'
+                                            xtype: 'mytreemenu'
                                         }
                                     ]
                                 },
