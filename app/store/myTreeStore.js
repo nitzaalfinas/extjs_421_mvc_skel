@@ -6,9 +6,10 @@ Ext.define('MvcSkel.store.myTreeStore', {
         children: [
             { text: "detention", leaf: true },
             { text: "homework", expanded: true, children: [
-                { text: "book report", leaf: true },
-                { text: "algebra", leaf: true}
-            ] },
+                    { text: "book report", leaf: true },
+                    { text: "algebra", leaf: true}
+                ] 
+            },
             { text: "buy lottery tickets", leaf: true }
         ]
     }

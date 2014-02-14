@@ -59,6 +59,7 @@ Ext.define('MvcSkel.controller.mainController', {
             "#menuGrid": {
                 click: this.addMyGrid
             }
+            
         });
     }
 
