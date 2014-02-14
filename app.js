@@ -11,7 +11,7 @@ Ext.application({
     ],
     views: [
         'mainView',
-        'mytreemenu.mytreemenu'
+        //'mytreemenu.mytreemenu'
     ],
     autoCreateViewport: true,
     name: 'MvcSkel',

@@ -6,7 +6,7 @@ Ext.define('MvcSkel.controller.mainController', {
         //this is show you how to add a child tab to the tab panel and active it if it is exist
         
         
-        // define/create the dashboard panel
+        // define/create the dashboard panel 'on the fly'
         var dashboardPanel = Ext.create('Ext.panel.Panel',{
             title: 'Dashboard',
             itemId: 'dashboardPanel',
@@ -34,12 +34,11 @@ Ext.define('MvcSkel.controller.mainController', {
     
     addMyGrid: function(button,e,options) {
         
-        var wowow = Ext.create('Ext.panel.Panel',{
-                        title: 'Nu Tab',
-                        itemId: 'nutab'
-                    });
+        //if you have created a panel, no need to add requires in viewport. Just Ext.create to call it. 
+        //by doing this, your application will load faster
+        var wowow = Ext.create('MvcSkel.view.mygridtab.mygridtab');
         
-        var tabiang = Ext.getCmp('myTabPanel').child('#nutab');
+        var tabiang = Ext.getCmp('myTabPanel').child('#mygridtab');
         
         if(tabiang) {
             Ext.getCmp('myTabPanel').setActiveTab(wowow);
