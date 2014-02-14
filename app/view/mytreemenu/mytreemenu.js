@@ -3,4 +3,5 @@ Ext.define('MvcSkel.view.mytreemenu.mytreemenu',{
     alias: 'widget.mytreemenu',
     store: 'myTreeStore',
     border: false
+    
 });
