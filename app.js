@@ -4,14 +4,17 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        
+        'myGridStoreModel'
     ],
     stores: [
-        'myTreeStore'
+        'myTreeStore',
+        'myGridStore',
+        'myGridStoreA'
     ],
     views: [
         'mainView',
-        //'mytreemenu.mytreemenu'
+        'mytreemenu.mytreemenu',
+        'mytreewin.mytreewin'
     ],
     autoCreateViewport: true,
     name: 'MvcSkel',

@@ -2,9 +2,6 @@ Ext.define('MvcSkel.view.mainView', {
     extend: 'Ext.container.Viewport',
     alias: 'widget.mainView',
 
-    requires: [
-        'MvcSkel.view.mytreemenu.mytreemenu'
-    ],
     
     layout: {
         type: 'fit'
@@ -81,7 +78,22 @@ Ext.define('MvcSkel.view.mainView', {
                                             margin: '0 0 5 0',
                                             text: 'Grid',
                                             textAlign: 'left'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            id: 'menuTreeGrid',
+                                            margin: '0 0 5 0',
+                                            text: 'Tree Grid',
+                                            textAlign: 'left'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            id: 'menuTreeGridAa',
+                                            margin: '0 0 5 0',
+                                            text: 'Tree Grid A',
+                                            textAlign: 'left'
                                         }
+                                        
                                     ]
                                 },
                                 {

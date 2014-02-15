@@ -10,13 +10,13 @@ Ext.define('MvcSkel.view.mygridtab.mygridtab',{
             xtype: 'pagingtoolbar',
             dock: 'bottom',
             displayInfo: true,
-            store: Ext.create('MvcSkel.store.myGridStore')
+            store: 'myGridStore'
         }
     ],
     items: [
         {
             xtype: 'gridpanel',
-            store: Ext.create('MvcSkel.store.myGridStore'),
+            store: 'myGridStore',
             columns: [
                 {
                     xtype: 'gridcolumn',

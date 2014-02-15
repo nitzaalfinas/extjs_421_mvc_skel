@@ -1,8 +1,5 @@
 Ext.define('MvcSkel.store.myGridStore', {
     extend: 'Ext.data.Store',
-    requires: [
-        'MvcSkel.model.myGridStoreModel'
-    ],
     model: 'MvcSkel.model.myGridStoreModel',
     autoLoad: true,
     pageSize: 5, 

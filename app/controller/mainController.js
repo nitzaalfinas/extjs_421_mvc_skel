@@ -37,7 +37,7 @@ Ext.define('MvcSkel.controller.mainController', {
         //if you have created a panel, no need to add requires in viewport. Just Ext.create to call it. 
         //by doing this, your application will load faster
         var wowow = Ext.create('MvcSkel.view.mygridtab.mygridtab');
-        
+    
         var tabiang = Ext.getCmp('myTabPanel').child('#mygridtab');
         
         if(tabiang) {
@@ -49,6 +49,19 @@ Ext.define('MvcSkel.controller.mainController', {
         }
     },
     
+    addTreeGridPanel: function(button,e,options) {
+        var theTreeGridPanel = Ext.create('MvcSkel.view.myTreeGridPanel.myTreeGridPanel');
+        
+        var theChild = Ext.getCmp('myTabPanel').child('#myTreeGridPanelItemId');
+        
+        if(theChild) {
+            Ext.getCmp('myTabPanel').setActiveTab(theTreeGridPanel);
+        }
+        else {
+            Ext.getCmp('myTabPanel').add(theTreeGridPanel);
+            Ext.getCmp('myTabPanel').setActiveTab(theTreeGridPanel);
+        }
+    },
 
     init: function(application) {
         this.control({
@@ -57,6 +70,24 @@ Ext.define('MvcSkel.controller.mainController', {
             },
             "#menuGrid": {
                 click: this.addMyGrid
+            },
+            "#menuTreeGrid": {
+                click: this.addTreeGridPanel
+            },
+            "#menuTreeGridAa": {
+                click: function () {
+                    var theGridPanelA = Ext.create('MvcSkel.view.myGridPanelA.myGridPanelA');
+                    
+                    var theChildA = Ext.getCmp('myTabPanel').child('#myGridPanelAItemId');
+                    
+                    if(theChildA) {
+                        Ext.getCmp('myTabPanel').setActiveTab(theGridPanelA);
+                    }
+                    else {
+                        Ext.getCmp('myTabPanel').add(theGridPanelA);
+                        Ext.getCmp('myTabPanel').setActiveTab(theGridPanelA);
+                    }
+                }
             }
             
         });
