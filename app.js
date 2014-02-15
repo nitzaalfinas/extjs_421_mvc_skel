@@ -4,12 +4,14 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'myGridStoreModel'
+        'myGridStoreModel',
+        'myTreeGridGroupModel'
     ],
     stores: [
         'myTreeStore',
         'myGridStore',
-        'myGridStoreA'
+        'myGridStoreA',
+        'myTreeGridGroupStore'
     ],
     views: [
         'mainView',

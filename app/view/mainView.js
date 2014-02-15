@@ -92,6 +92,26 @@ Ext.define('MvcSkel.view.mainView', {
                                             margin: '0 0 5 0',
                                             text: 'Tree Grid A',
                                             textAlign: 'left'
+                                        },
+                                        {
+                                            xtype: 'button',
+                                            id: 'menuTreeGridGroup',
+                                            margin: '0 0 5 0',
+                                            text: 'Tree Grid Grouping',
+                                            textAlign: 'left',
+                                            handler: function() {
+                                                var thePanel = Ext.create('MvcSkel.view.myTreeGridGroup.myTreeGridGroup');
+                                                
+                                                var theChildTab = Ext.getCmp('myTabPanel').child('#childGridPanelx');
+                                                
+                                                if(theChildTab) {
+                                                    Ext.getCmp('myTabPanel').setActiveTab(thePanel);
+                                                }
+                                                else {
+                                                    Ext.getCmp('myTabPanel').add(thePanel);
+                                                    Ext.getCmp('myTabPanel').setActiveTab(thePanel);
+                                                }
+                                            }
                                         }
                                         
                                     ]
@@ -107,70 +127,6 @@ Ext.define('MvcSkel.view.mainView', {
                                     items: [
                                         {
                                             xtype: 'mytreemenu'
-                                        }
-                                    ]
-                                },
-                                {
-                                    xtype: 'panel',
-                                    layout: {
-                                        align: 'stretch',
-                                        type: 'vbox'
-                                    },
-                                    bodyPadding: 5,
-                                    title: 'Master',
-                                    items: [
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuProvinsi',
-                                            margin: '0 0 5 0',
-                                            text: 'Provinsi',
-                                            textAlign: 'left'
-                                        },
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuKabKota',
-                                            margin: '0 0 5 0',
-                                            text: 'Kabupaten / Kota',
-                                            textAlign: 'left'
-                                        },
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuKecamatan',
-                                            margin: '0 0 5 0',
-                                            text: 'Kecamatan',
-                                            textAlign: 'left'
-                                        },
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuKelDesa',
-                                            margin: '0 0 5 0',
-                                            text: 'Kelurahan / Desa',
-                                            textAlign: 'left'
-                                        }
-                                    ]
-                                },
-                                {
-                                    xtype: 'panel',
-                                    layout: {
-                                        align: 'stretch',
-                                        type: 'vbox'
-                                    },
-                                    bodyPadding: 5,
-                                    title: 'Pelayanan',
-                                    items: [
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuPerizinan',
-                                            margin: '0 0 5 0',
-                                            text: 'Perizinan',
-                                            textAlign: 'left'
-                                        },
-                                        {
-                                            xtype: 'button',
-                                            id: 'menuNonPerizinan',
-                                            margin: '0 0 5 0',
-                                            text: 'Non Perizinan',
-                                            textAlign: 'left'
                                         }
                                     ]
                                 }
