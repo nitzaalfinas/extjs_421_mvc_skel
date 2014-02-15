@@ -34,7 +34,6 @@ Ext.define('MvcSkel.view.mainView', {
                             region: 'center',
                             title: 'Center Region',
                             id: 'wrapContent',
-                            margin: '0 0 0 5',
                             autoScroll: true,
                             layout: {
                                 type: 'fit'
@@ -42,7 +41,8 @@ Ext.define('MvcSkel.view.mainView', {
                             items: [
                                 {
                                     xtype: 'tabpanel',
-                                    id: 'myTabPanel'
+                                    id: 'myTabPanel',
+                                    border: false
                                 }
                             ]
                         },
