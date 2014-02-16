@@ -5,6 +5,10 @@ Ext.define('MvcSkel.view.mygridtab.mygridtab',{
     itemId: 'mygridtab',
     closable: true,
     
+    requires: [
+        'MvcSkel.view.mygridtab.winform'
+    ],
+    
     dockedItems: [
         {
             xtype: 'pagingtoolbar',
@@ -17,6 +21,19 @@ Ext.define('MvcSkel.view.mygridtab.mygridtab',{
         {
             xtype: 'gridpanel',
             store: 'myGridStore',
+            listeners: {
+                itemdblclick: function(tablepanel, record, item, index, e, options) {
+                    console.log('Double clicked on ' + record.get('id'));
+                    //var view = Ext.widget('kelDesaWinEdit');
+                    //view.down('form').loadRecord(record);
+                    
+                    var view = Ext.widget('gridTabWinForm').show();
+                    
+                    view.down('form').loadRecord(record);
+                    
+                    
+                }
+            },
             columns: [
                 {
                     xtype: 'gridcolumn',
@@ -38,5 +55,5 @@ Ext.define('MvcSkel.view.mygridtab.mygridtab',{
                 }
             ]
         }
-    ]    
+    ]
 });

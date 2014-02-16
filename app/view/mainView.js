@@ -39,7 +39,7 @@ Ext.define('MvcSkel.view.mainView', {
                                 {
                                     xtype: 'tabpanel',
                                     id: 'myTabPanel',
-                                    border: false
+                                    border: true
                                 }
                             ]
                         },
